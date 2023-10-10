@@ -1,0 +1,162 @@
+{
+  "project_info": {
+    "project_number": "26184870649",
+    "project_id": "flutter-video-audio-chat-baf9c",
+    "storage_bucket": "flutter-video-audio-chat-baf9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26184870649:android:45b5d2bd01096116621028",
+        "android_client_info": {
+          "package_name": "com.dbestech.chatty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26184870649-b1mlsp1oiasftuofl0eukokl9q37b4hu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dbestech.chatty",
+            "certificate_hash": "d1263f4c7d4e74bc32d955413f0a6bd7cc2ef41e"
+          }
+        },
+        {
+          "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJUKGYGXhAZZK14rZRBX-DDqeJa0pD5no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26184870649-85t4irrr7co0tfs37ogrugpn6dikr258.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tswsmart.chatty"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26184870649:android:0d461fa2b3277329621028",
+        "android_client_info": {
+          "package_name": "com.example.testrun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJUKGYGXhAZZK14rZRBX-DDqeJa0pD5no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26184870649-85t4irrr7co0tfs37ogrugpn6dikr258.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tswsmart.chatty"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26184870649:android:bac901ff1f711ea0621028",
+        "android_client_info": {
+          "package_name": "com.thanasarn.rich.rich"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJUKGYGXhAZZK14rZRBX-DDqeJa0pD5no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26184870649-85t4irrr7co0tfs37ogrugpn6dikr258.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tswsmart.chatty"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26184870649:android:2cde1ab2c0d4b263621028",
+        "android_client_info": {
+          "package_name": "com.tswsmart.chatty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJUKGYGXhAZZK14rZRBX-DDqeJa0pD5no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26184870649-6ppcneki77hnvfr69ija4u9jr9dlonir.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26184870649-85t4irrr7co0tfs37ogrugpn6dikr258.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tswsmart.chatty"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
