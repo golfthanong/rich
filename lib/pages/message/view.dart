@@ -3,6 +3,7 @@ import 'package:chatty/common/routes/routes.dart';
 import 'package:chatty/common/values/colors.dart';
 
 import 'package:chatty/pages/message/controller.dart';
+import 'package:chatty/pages/message/widgets/news_message_list.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:get/get.dart';
@@ -91,6 +92,108 @@ class MessagePage extends GetView<MessageController> {
       ),
     );
   }
+  Widget _headTabs() {
+    return Center(
+        child: Container(
+            width: 320.w,
+            height: 48.h,
+            margin: EdgeInsets.only(bottom: 0.h),
+            padding: EdgeInsets.all(4.w),
+            decoration: BoxDecoration(
+              color: AppColors.primarySecondaryBackground,
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GestureDetector(
+                    child: Container(
+                      width: 150.w,
+                      height: 40.h,
+                      margin: EdgeInsets.only(bottom: 0.h),
+                      padding: EdgeInsets.all(0.h),
+                      decoration: controller.state.tabStatus.value
+                          ? BoxDecoration(
+                        color: AppColors.primaryBackground,
+                        borderRadius:
+                        BorderRadius.all(Radius.circular(5)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.1),
+                            spreadRadius: 2,
+                            blurRadius: 3,
+                            offset: Offset(
+                                0, 2), // changes position of shadow
+                          ),
+                        ],
+                      )
+                          : BoxDecoration(),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            child: Text(
+                              "ข่าวประกาศ",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: AppColors.primaryThreeElementText,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      //controller.goTabStatus();
+                    }),
+                /*GestureDetector(
+                    child: Container(
+                      width: 150.w,
+                      height: 40.h,
+                      margin: EdgeInsets.only(bottom: 0.h),
+                      padding: EdgeInsets.all(0.h),
+                      decoration: controller.state.tabStatus.value
+                          ? BoxDecoration()
+                          : BoxDecoration(
+                        color: AppColors.primaryBackground,
+                        borderRadius:
+                        BorderRadius.all(Radius.circular(5)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.1),
+                            spreadRadius: 2,
+                            blurRadius: 3,
+                            offset: Offset(
+                                0, 2), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            child: Text(
+                              "Call",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: AppColors.primaryText,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      controller.goTabStatus();
+                    })*/
+              ],
+            )));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -107,8 +210,30 @@ class MessagePage extends GetView<MessageController> {
                       pinned: true,
                       title: _headBar(),
                     ),
+                   SliverPadding(
+                       padding: EdgeInsets.symmetric(
+                         vertical: 0.w,
+                         horizontal: 0.w,
+                       ),
+                     sliver: SliverToBoxAdapter(
+                       child: _headTabs(),
+                     ),
+                   ) ,  // เอาไว้แสดง tab call และ chat
+
+                    SliverPadding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 0.w,
+                        horizontal: 0.w,
+                      ),
+                      sliver: SliverToBoxAdapter(
+                        //child: _headTabs(),
+                        child: NewsMessageList(),
+                      ),
+                    ) ,
                   ],
                 ),
+
+
 
                 //BottomNavigationBar(items: items),
 

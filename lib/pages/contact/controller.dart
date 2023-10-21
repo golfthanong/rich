@@ -255,7 +255,7 @@ class ContactController extends GetxController {
     state.contactList.clear();
     var result = await ContactAPI.post_contact();
     if (kDebugMode) {
-      print(result.data!);
+      print('  ${result.data!}');
     }
     if (result.code == 200) {
       state.contactList.addAll(result.data!);
