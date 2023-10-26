@@ -226,7 +226,7 @@ class MessagePage extends GetView<MessageController> {
                         horizontal: 0.w,
                       ),
                       sliver: SliverToBoxAdapter(
-                        //child: _headTabs(),
+
                         child: NewsMessageList(),
                       ),
                     ) ,

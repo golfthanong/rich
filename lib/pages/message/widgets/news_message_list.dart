@@ -106,24 +106,15 @@ class NewsMessageList extends GetView<MessageController> {
         height: 800.h,         // Height of the container
         color: Colors.white,   // Background color of the container
         child: Center(
-          /*child: Text(
-            'Hello, Flutter! ${controller.state.news_messageList.length}',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),*/
+          // child: Text(
+          //   'Hello, Flutter! ${controller.state.news_messageList.length}',
+          //   style: TextStyle(
+          //     fontSize: 20,
+          //     color: Colors.red,
+          //   ),
+          // ),
 
-          /*child:ListView.builder(
-            itemCount: controller.state.news_messageList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                //leading: Image.asset('${controller.state.news_messageList[index].img}'), // Replace with your image source
-                leading: Image.network('${controller.state.news_messageList[index].img}'),
-                title: Text('${controller.state.news_messageList[index].text}'),
-              );
-            },
-          ),*/
+
             child: ListView.builder(
               itemCount: controller.state.news_messageList.length,
               itemBuilder: (BuildContext context, int index) {

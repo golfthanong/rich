@@ -14,7 +14,7 @@ class MessageController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    asyncLoadAllData();
+    //asyncLoadAllData();
   }
 
   final state = MessageState();
@@ -32,6 +32,7 @@ class MessageController extends GetxController {
   void onInit(){
     super.onInit();
     getProfile();
+    asyncLoadAllData();
 
   }
 
