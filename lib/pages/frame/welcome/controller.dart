@@ -11,7 +11,7 @@ class WelcomeController extends GetxController {
   void onReady() {
     super.onReady();
     Future.delayed(
-        const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
-        //const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.MainPage));
+        //const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
+        const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.MainPage));
   }
 }

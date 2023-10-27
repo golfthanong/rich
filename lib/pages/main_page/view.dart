@@ -3,19 +3,18 @@ import 'package:chatty/pages/main_page/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:getxbottombar/getxbottombar.dart';
+
+import '../../common/routes/names.dart';
+import '../../common/routes/pages.dart';
 
 
 
 class MainPagePage extends GetView<MainPageController> {
   const MainPagePage({Key? key}) : super(key: key);
-  static const List<Widget> _pages = <Widget>[
-    // Add your pages or sections here
-    Text('Page 1'),
-    Text('Page 2'),
-    Text('Page 3'),
-  ];
 
-  Widget _buildPageHeadTitle(String title) {
+
+  /*Widget _buildPageHeadTitle(String title) {
     return Container(
       margin: EdgeInsets.only(top: 50.h),
       child: Center(
@@ -32,11 +31,35 @@ class MainPagePage extends GetView<MainPageController> {
       //   ),
       // ),
     );
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return GetxBottomBarView(
+      // appBar: AppBar(
+      //   title: Text('GetxBottomBar'),
+      //   centerTitle: true,
+      // ),
+      getPages: AppPages.routes,
+      routes: [AppRoutes.SIGN_IN, AppRoutes.EmailLogin, AppRoutes.Message],
+      defaultTransition: Transition.noTransition,
+      backgroundColor: Colors.grey.shade100,
+      bottomBar: <GetBottomBarItem>[
+        GetBottomBarItem(
+            icon: Icon(Icons.dashboard),
+            title: Text('Dashboard'),
+            activeColor: Colors.red),
+        GetBottomBarItem(
+            icon: Icon(Icons.shopping_cart_outlined),
+            title: Text('Cart'),
+            activeColor: Colors.green),
+        GetBottomBarItem(
+            icon: Icon(Icons.person),
+            title: Text('User'),
+            activeColor: Colors.blue)
+      ],
+    );
+    /*return Scaffold(
       backgroundColor: AppColors.primaryBackground,
       body: Center(
         child: _pages.elementAt(controller.state.selectedIndex),
@@ -67,6 +90,6 @@ class MainPagePage extends GetView<MainPageController> {
       //   height: 780.h,
       //   child: _buildPageHeadTitle(controller.title),
       // ),
-    );
+    );*/  // return เมนู ธรรมดา
   }
 }
