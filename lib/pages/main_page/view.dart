@@ -36,60 +36,31 @@ class MainPagePage extends GetView<MainPageController> {
   @override
   Widget build(BuildContext context) {
     return GetxBottomBarView(
-      // appBar: AppBar(
-      //   title: Text('GetxBottomBar'),
-      //   centerTitle: true,
-      // ),
+
       getPages: AppPages.routes,
-      routes: [AppRoutes.SIGN_IN, AppRoutes.EmailLogin, AppRoutes.Message],
+      routes: [AppRoutes.Message, AppRoutes.SIGN_IN, AppRoutes.EmailLogin, AppRoutes.Contact],
       defaultTransition: Transition.noTransition,
       backgroundColor: Colors.grey.shade100,
+      height: 60.h,
       bottomBar: <GetBottomBarItem>[
         GetBottomBarItem(
-            icon: Icon(Icons.dashboard),
-            title: Text('Dashboard'),
+            icon: Icon(Icons.home_filled),
+            title: Text('Home'),
             activeColor: Colors.red),
+        GetBottomBarItem(
+            icon: Icon(Icons.backpack_rounded),
+            title: Text('Shopping'),
+            activeColor: Colors.deepOrangeAccent),
         GetBottomBarItem(
             icon: Icon(Icons.shopping_cart_outlined),
             title: Text('Cart'),
             activeColor: Colors.green),
         GetBottomBarItem(
-            icon: Icon(Icons.person),
-            title: Text('User'),
+            icon: Icon(Icons.chat),
+            title: Text('Chat'),
             activeColor: Colors.blue)
       ],
     );
-    /*return Scaffold(
-      backgroundColor: AppColors.primaryBackground,
-      body: Center(
-        child: _pages.elementAt(controller.state.selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Page 1',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Page 2',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Page 3',
-          ),
-        ],
-        currentIndex: controller.state.selectedIndex,
-        onTap:  (index) {
-        // Use a lambda function to pass the index to onItemTapped
-        controller.onItemTapped(index);
-        },
-      ),
-      // Container(
-      //   width: 360.w,
-      //   height: 780.h,
-      //   child: _buildPageHeadTitle(controller.title),
-      // ),
-    );*/  // return เมนู ธรรมดา
+
   }
 }

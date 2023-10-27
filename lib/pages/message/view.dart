@@ -190,7 +190,7 @@ class MessagePage extends GetView<MessageController> {
                     ),
                     onTap: () {
                       controller.goTabStatus();
-                    })*/
+                    })*/ // tab เมนูข่าว
               ],
             )));
   }
@@ -230,14 +230,13 @@ class MessagePage extends GetView<MessageController> {
                         child: NewsMessageList(),
                       ),
                     ) ,
+
                   ],
+
                 ),
 
 
-
-                //BottomNavigationBar(items: items),
-
-                Positioned(
+                /* Positioned(
                   right: 20.w,
                   bottom: 70.w,
                   height: 50.w,
@@ -271,7 +270,7 @@ class MessagePage extends GetView<MessageController> {
                       Get.toNamed(AppRoutes.Contact);
                     },
                   ),
-                ),
+                ),*/ //ปุ่มไปห้อง chat
               ],
             ),
           ),
