@@ -236,7 +236,7 @@ class MessagePage extends GetView<MessageController> {
                 ),
 
 
-                /* Positioned(
+                 Positioned(
                   right: 20.w,
                   bottom: 70.w,
                   height: 50.w,
@@ -270,7 +270,7 @@ class MessagePage extends GetView<MessageController> {
                       Get.toNamed(AppRoutes.Contact);
                     },
                   ),
-                ),*/ //ปุ่มไปห้อง chat
+                ), //ปุ่มไปห้อง chat
               ],
             ),
           ),

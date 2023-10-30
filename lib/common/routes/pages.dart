@@ -13,6 +13,7 @@ import '../../pages/message/chat/index.dart';
 import '../../pages/message/index.dart';
 import '../../pages/profile/index.dart';
 
+import '../../pages/shopping/index.dart';
 import 'routes.dart';
 
 class AppPages {
@@ -35,6 +36,15 @@ class AppPages {
       name: AppRoutes.Message,
       page: () => const MessagePage(),
       binding: MessageBinding(),
+      middlewares: [
+        RouteAuthMiddleware(priority: 1),
+      ],
+    ),
+
+    GetPage(
+      name: AppRoutes.Shopping,
+      page: () => const ShoppingPage(),
+      binding: ShoppingBinding(),
       middlewares: [
         RouteAuthMiddleware(priority: 1),
       ],

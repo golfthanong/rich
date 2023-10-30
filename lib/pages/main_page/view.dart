@@ -38,7 +38,7 @@ class MainPagePage extends GetView<MainPageController> {
     return GetxBottomBarView(
 
       getPages: AppPages.routes,
-      routes: [AppRoutes.Message, AppRoutes.SIGN_IN, AppRoutes.EmailLogin, AppRoutes.Contact],
+      routes: [AppRoutes.Message, AppRoutes.Shopping, AppRoutes.EmailLogin, AppRoutes.Contact],
       defaultTransition: Transition.noTransition,
       backgroundColor: Colors.grey.shade100,
       height: 60.h,
@@ -48,7 +48,8 @@ class MainPagePage extends GetView<MainPageController> {
             title: Text('Home'),
             activeColor: Colors.red),
         GetBottomBarItem(
-            icon: Icon(Icons.backpack_rounded),
+            //icon: Icon(Icons.backpack_rounded),
+            icon: Icon(Icons.shopping_basket),
             title: Text('Shopping'),
             activeColor: Colors.deepOrangeAccent),
         GetBottomBarItem(

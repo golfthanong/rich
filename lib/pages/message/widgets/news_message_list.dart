@@ -44,40 +44,6 @@ class NewsMessageList extends GetView<MessageController> {
 
         ),
       );
-      // return CustomScrollView(
-      //   slivers: [
-      //     SliverPadding(
-      //       padding: EdgeInsets.symmetric(
-      //         vertical: 0.w,
-      //         horizontal: 20.w,
-      //       ),
-      //       sliver: SliverList(
-      //         delegate: SliverChildBuilderDelegate(
-      //               (BuildContext context, int index) {
-      //             var item = controller.state.news_messageList[index];
-      //
-      //             //return _buildListItem(item);
-      //                 return Container(
-      //                 width: 200,          // Width of the container
-      //                 height: 200,         // Height of the container
-      //                 color: Colors.red,   // Background color of the container
-      //                 child: Center(
-      //                 child: Text(
-      //                 'Hello, Flutter!',
-      //                 style: TextStyle(
-      //                 fontSize: 20,
-      //                 color: Colors.white,
-      //             ),
-      //                 ),
-      //                 ),
-      //                 );
-      //           },
-      //           childCount: controller.state.news_messageList.length,
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // );
-    //});
+
   }
 }
