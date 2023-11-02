@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.thanasarn.rich.rich">
     <application
-        android:label="THE RICH ONLINE"
+        android:label="The Rich Online"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
