@@ -86,6 +86,50 @@ class SignInPage extends GetView<SignInController> {
     );
   }
 
+  Widget _buildThirdPartyAppleLogin() {
+    return GestureDetector(
+        child: Container(
+          width: 295.w,
+          height: 44.h,
+          margin: EdgeInsets.only(bottom: 15.h),
+          padding: EdgeInsets.all(10.h),
+          decoration: BoxDecoration(
+            color: AppColors.primarySecondaryBackground,
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 2,
+                offset: Offset(0, 1), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                  padding: EdgeInsets.only(left: 40.w, right: 30.w),
+                  child: Image.asset("assets/icons/apple.png")),
+              Container(
+                child: Text(
+                  "Sign in with Apple",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: AppColors.primaryText,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14.sp,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        onTap: () {
+          controller.handleSignIn("apple");
+        });
+  }
+
   Widget _buildOrWidget() {
     return Container(
       margin: EdgeInsets.only(top: 20.h, bottom: 35.h),
@@ -156,13 +200,14 @@ class SignInPage extends GetView<SignInController> {
             _buildLogo(),
             _buildthirdPartyLogin("Google", "google"),
             // _buildthirdPartyLogin("Facebook", "facebook"),
-            // _buildthirdPartyLogin("Apple", "apple"),
+            //_buildthirdPartyLogin("Apple", "apple"),
+            _buildThirdPartyAppleLogin(),
             _buildOrWidget(),
             _buildthirdPartyLogin("The Rich Online Member", ""),
             SizedBox(
               height: 35.h,
             ),
-            _buildSignUpWidget(),
+            //_buildSignUpWidget(),
           ],
         ),
       ),
