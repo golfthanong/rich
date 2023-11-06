@@ -18,6 +18,8 @@ class AppRoutes {
   //chat
   static const Chat = '/chat';
 
+  static const Shopping = '/shopping';
+
 
 
   static const Photoimgview = '/photoimgview';

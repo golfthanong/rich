@@ -8,13 +8,13 @@ class MainPageController extends GetxController {
   final state = MainPageState();
 
 
-   onItemTapped(int index) {
-    print('index: $index');
-    if (index == 2) {
-      // Navigate to MainPage using GetX route
-      Get.offAllNamed(AppRoutes.MainPage); // Replace AppRoutes.MainPage with your actual route name
-    }
-    }
+   // onItemTapped(int index) {
+   //  print('index: $index');
+   //  if (index == 2) {
+   //    // Navigate to MainPage using GetX route
+   //    Get.offAllNamed(AppRoutes.MainPage); // Replace AppRoutes.MainPage with your actual route name
+   //  }
+   //  }
 
 
 

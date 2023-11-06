@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
+//import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -34,7 +34,7 @@ class ChatController extends GetxController {
   var listener ;
   var isLoadmore = true;
   File? _photo;
-  final ImagePicker _picker = ImagePicker();
+
   ScrollController myScrollController = ScrollController();
 
 
@@ -143,15 +143,15 @@ class ChatController extends GetxController {
     });
   }
 
-  Future imgFromGallery() async{
-      final pickedFile =  await _picker.pickImage(source: ImageSource.gallery);
-      if(pickedFile!=null){
-        _photo = File(pickedFile.path);
-        uploadFile();
-      }else{
-        print('No image selected');
-      }
-  }
+  // Future imgFromGallery() async{
+  //     final pickedFile =  await _picker.pickImage(source: ImageSource.gallery);
+  //     if(pickedFile!=null){
+  //       _photo = File(pickedFile.path);
+  //       uploadFile();
+  //     }else{
+  //       print('No image selected');
+  //     }
+  // }
 
   // Future launchURL() async{
   //   const url = 'https://www.google.com';

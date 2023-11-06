@@ -14,7 +14,7 @@ class MessageController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    //asyncLoadAllData();
+
   }
 
   final state = MessageState();
@@ -44,9 +44,7 @@ class MessageController extends GetxController {
     );
     state.news_messageList.clear();
     var result = await NewsMessageAPI.get_news_message();
-    if (kDebugMode) {
-      print('aaaaaaaa  ${result.data!}');
-    }
+
     if (result.code == 200) {
       state.news_messageList.addAll(result.data!);
     }

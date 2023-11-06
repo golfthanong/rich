@@ -280,7 +280,7 @@ class ChatPage extends GetView<ChatController> {
                               child: Image.asset('assets/icons/photo.png'),
                             ),
                             onTap: () {
-                              controller.imgFromGallery();
+                              //controller.imgFromGallery();
                             },
                           ),
                           GestureDetector(

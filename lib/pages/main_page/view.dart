@@ -3,19 +3,18 @@ import 'package:chatty/pages/main_page/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:getxbottombar/getxbottombar.dart';
+
+import '../../common/routes/names.dart';
+import '../../common/routes/pages.dart';
 
 
 
 class MainPagePage extends GetView<MainPageController> {
   const MainPagePage({Key? key}) : super(key: key);
-  static const List<Widget> _pages = <Widget>[
-    // Add your pages or sections here
-    Text('Page 1'),
-    Text('Page 2'),
-    Text('Page 3'),
-  ];
 
-  Widget _buildPageHeadTitle(String title) {
+
+  /*Widget _buildPageHeadTitle(String title) {
     return Container(
       margin: EdgeInsets.only(top: 50.h),
       child: Center(
@@ -32,41 +31,37 @@ class MainPagePage extends GetView<MainPageController> {
       //   ),
       // ),
     );
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.primaryBackground,
-      body: Center(
-        child: _pages.elementAt(controller.state.selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Page 1',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Page 2',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Page 3',
-          ),
-        ],
-        currentIndex: controller.state.selectedIndex,
-        onTap:  (index) {
-        // Use a lambda function to pass the index to onItemTapped
-        controller.onItemTapped(index);
-        },
-      ),
-      // Container(
-      //   width: 360.w,
-      //   height: 780.h,
-      //   child: _buildPageHeadTitle(controller.title),
-      // ),
+    return GetxBottomBarView(
+
+      getPages: AppPages.routes,
+      routes: [AppRoutes.Message, AppRoutes.Shopping, AppRoutes.EmailLogin, AppRoutes.Contact],
+      defaultTransition: Transition.noTransition,
+      backgroundColor: Colors.grey.shade100,
+      height: 60.h,
+      bottomBar: <GetBottomBarItem>[
+        GetBottomBarItem(
+            icon: Icon(Icons.home_filled),
+            title: Text('Home'),
+            activeColor: Colors.red),
+        GetBottomBarItem(
+            //icon: Icon(Icons.backpack_rounded),
+            icon: Icon(Icons.shopping_basket),
+            title: Text('Shopping'),
+            activeColor: Colors.deepOrangeAccent),
+        GetBottomBarItem(
+            icon: Icon(Icons.shopping_cart_outlined),
+            title: Text('Cart'),
+            activeColor: Colors.green),
+        GetBottomBarItem(
+            icon: Icon(Icons.chat),
+            title: Text('Chat'),
+            activeColor: Colors.blue)
+      ],
     );
+
   }
 }

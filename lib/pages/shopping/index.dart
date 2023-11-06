@@ -1,4 +1,4 @@
-library main_page;
+library shopping;
 
 export './state.dart';
 export './controller.dart';
