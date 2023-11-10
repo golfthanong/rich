@@ -50,21 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAJUKGYGXhAZZK14rZRBX-DDqeJa0pD5no',
-    appId: '1:26184870649:android:bac901ff1f711ea0621028',
-    messagingSenderId: '26184870649',
-    projectId: 'flutter-video-audio-chat-baf9c',
-    storageBucket: 'flutter-video-audio-chat-baf9c.appspot.com',
+    apiKey: 'AIzaSyBnjDzCAXwNDmMfldB0lHHjVNLmHj16wFE',
+    appId: '1:740979013093:android:510a7ecec3f0d531b22b0c',
+    messagingSenderId: '740979013093',
+    projectId: 'therichonline-database',
+    storageBucket: 'therichonline-database.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBiCJLksNR9W6JX8tbPJqFJvslcDj8efq4',
-    appId: '1:26184870649:ios:887a732db7bd11ce621028',
-    messagingSenderId: '26184870649',
-    projectId: 'flutter-video-audio-chat-baf9c',
-    storageBucket: 'flutter-video-audio-chat-baf9c.appspot.com',
-    androidClientId: '26184870649-b1mlsp1oiasftuofl0eukokl9q37b4hu.apps.googleusercontent.com',
-    iosClientId: '26184870649-3j2fidhsv1tha338tds9tnu8e7bakmvk.apps.googleusercontent.com',
-    iosBundleId: 'com.thanasarn.rich.rich',
+    apiKey: 'AIzaSyCb_0EWEA-B9FtMe4ovChqXpf3Sy3o-mRU',
+    appId: '1:740979013093:ios:b8545b74625b3708b22b0c',
+    messagingSenderId: '740979013093',
+    projectId: 'therichonline-database',
+    storageBucket: 'therichonline-database.appspot.com',
+    iosBundleId: 'com.therichonline.therichonline',
   );
 }

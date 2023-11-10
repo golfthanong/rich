@@ -146,10 +146,10 @@ class EmailLoginPage extends GetView<EmailLoginController> {
     );
   }
 
-  Container _buildPhoneInput() {
+  Widget _buildPhoneInput() {
     return Container(
         width: 295.w,
-        height: 44.h,
+        height: 60.h,
       margin: EdgeInsets.only(bottom: 20.h,top: 0.h),
       padding: EdgeInsets.all(0.h),
       decoration: BoxDecoration(

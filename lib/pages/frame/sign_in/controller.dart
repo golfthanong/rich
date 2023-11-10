@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -74,8 +75,8 @@ class SignInController extends GetxController {
             String displayName = "apple_user";
             String email = "apple@email.com";
             String id = user.user!.uid;
-            //String photoUrl = "${SERVER_API_URL}uploads/default.png";
-            String photoUrl =  "assets/icons/apple.png";
+            String photoUrl = "${SERVER_API_URL}uploads/default.png";
+
             print(photoUrl);
             print("apple uid----");
             print(id);
@@ -118,8 +119,8 @@ class SignInController extends GetxController {
         maskType: EasyLoadingMaskType.clear,
         dismissOnTap: true);
     var result = await UserAPI.Login(params: loginRequestEntity);
-    print('yyyyyyyyyyyyyyyyyyyyy');
-    print(result.data);
+    //print('yyyyyyyyyyyyyyyyyyyyy');
+    //print(result.data);
     //if (result.code == 0) {//ถ้าตอบกลับมาได้ ต้นจะไม่ส่งcodeมา
     if (result.data != null ) {
       await UserStore.to.saveProfile(result.data!);

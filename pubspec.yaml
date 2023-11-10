@@ -112,7 +112,6 @@ dependencies:
 
   agora_rtc_engine: ^6.1.0
 
-  just_audio: ^0.9.30
 
   flutter_local_notifications: ^13.0.0
 

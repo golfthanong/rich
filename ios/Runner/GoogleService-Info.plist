@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>26184870649-3j2fidhsv1tha338tds9tnu8e7bakmvk.apps.googleusercontent.com</string>
+	<string>740979013093-rbqgs0d09mhhoseiaih58hes108sj3pk.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.26184870649-3j2fidhsv1tha338tds9tnu8e7bakmvk</string>
+	<string>com.googleusercontent.apps.740979013093-rbqgs0d09mhhoseiaih58hes108sj3pk</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>26184870649-b1mlsp1oiasftuofl0eukokl9q37b4hu.apps.googleusercontent.com</string>
+	<string>740979013093-7530sk5orlo533v7d12o8ftobg2lj1dr.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBiCJLksNR9W6JX8tbPJqFJvslcDj8efq4</string>
+	<string>AIzaSyCb_0EWEA-B9FtMe4ovChqXpf3Sy3o-mRU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>26184870649</string>
+	<string>740979013093</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.thanasarn.rich.rich</string>
+	<string>com.therichonline.therichonline</string>
 	<key>PROJECT_ID</key>
-	<string>flutter-video-audio-chat-baf9c</string>
+	<string>therichonline-database</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flutter-video-audio-chat-baf9c.appspot.com</string>
+	<string>therichonline-database.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:26184870649:ios:887a732db7bd11ce621028</string>
+	<string>1:740979013093:ios:b8545b74625b3708b22b0c</string>
 </dict>
 </plist>
