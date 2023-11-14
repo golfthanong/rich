@@ -13,5 +13,6 @@ class WelcomeController extends GetxController {
     Future.delayed(
         const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
         //const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.MainPage));
+        //const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.EmailLogin));
   }
 }

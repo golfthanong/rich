@@ -11,7 +11,7 @@ class ContactPage extends GetView<ContactController> {
   AppBar _buildAppBar() {
     return AppBar(
       title: Text(
-        'Contact',
+        'Room Contact',
         style: TextStyle(
           color: AppColors.primaryText,
           fontSize: 16.sp,

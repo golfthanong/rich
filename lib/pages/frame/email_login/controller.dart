@@ -111,8 +111,8 @@ class EmailLoginController extends GetxController {
       EasyLoading.dismiss();
       toastInfo(msg: 'Internet Error');
     }
-    //Get.offAllNamed(AppRoutes.Message);
-    Get.offAllNamed(AppRoutes.MainPage);
+    Get.offAllNamed(AppRoutes.Message);
+    //Get.offAllNamed(AppRoutes.MainPage);
   }
 
   @override

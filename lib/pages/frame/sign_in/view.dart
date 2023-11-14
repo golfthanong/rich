@@ -201,7 +201,7 @@ class SignInPage extends GetView<SignInController> {
             _buildthirdPartyLogin("Google", "google"),
             // _buildthirdPartyLogin("Facebook", "facebook"),
             //_buildthirdPartyLogin("Apple", "apple"),
-            //_buildThirdPartyAppleLogin(),
+            _buildThirdPartyAppleLogin(),
             _buildOrWidget(),
             _buildthirdPartyLogin("The Rich Online Member", ""),
             SizedBox(
