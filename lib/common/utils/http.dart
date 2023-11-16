@@ -109,7 +109,7 @@ class HttpUtil {
         EasyLoading.showError(eInfo.message);
         break;
       default:
-        EasyLoading.showError('未知错误');
+        EasyLoading.showError('Phone Or Password Failed');
         break;
     }
   }
@@ -165,7 +165,7 @@ class HttpUtil {
                 }
             }
           } on Exception catch (_) {
-            return ErrorEntity(code: -1, message: "未知错误");
+            return ErrorEntity(code: -1, message: "ใส่เบอร์โทรศัพท์หรือ Password ผิด");
           }
         }
       default:
