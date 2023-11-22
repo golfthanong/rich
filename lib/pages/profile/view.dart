@@ -62,7 +62,7 @@ class ProfilePage extends GetView<ProfileController> {
             image: AssetImage('assets/images/account_header.png'),
           ),
         ),
-        Positioned(
+        /*Positioned(
           bottom: 0.w,
           right: 0.w,
           height: 35.w,
@@ -78,7 +78,7 @@ class ProfilePage extends GetView<ProfileController> {
               child: Image.asset("assets/icons/edit.png"),
             ),
           ),
-        )
+        )*/
       ],
     );
   }

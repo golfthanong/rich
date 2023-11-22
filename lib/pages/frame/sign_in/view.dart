@@ -79,11 +79,52 @@ class SignInPage extends GetView<SignInController> {
       ),
       onTap: () {
          print("... sign up from here  third party $loginType...");
-        loginType == 'Google'?controller.handleSignIn('google'):
-        controller.handleSignIn('Email');
-        // controller.handleSignIn('google');
+         loginType == 'Google'?controller.handleSignIn('google'):
+         controller.handleSignIn('Email');
+         //controller.handleSignIn('google');
       },
     );
+  }
+
+  Widget _buildLoginBtn() {
+    return GestureDetector(
+        child: Container(
+          width: 295.w,
+          height: 44.h,
+          margin: EdgeInsets.only(top:60.h,bottom: 30.h),
+          padding: EdgeInsets.all(10.h),
+          decoration: BoxDecoration(
+            color: AppColors.primaryElement,
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 2,
+                offset: Offset(0, 1), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                child: Text(
+                  "The Rich Online Member",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: AppColors.primaryElementText,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14.sp,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        onTap: () {
+          controller.handleSignIn('Email');
+        });
   }
 
   Widget _buildThirdPartyAppleLogin() {
@@ -201,8 +242,10 @@ class SignInPage extends GetView<SignInController> {
             _buildthirdPartyLogin("Google", "google"),
             // _buildthirdPartyLogin("Facebook", "facebook"),
             //_buildthirdPartyLogin("Apple", "apple"),
-            _buildThirdPartyAppleLogin(),
+            //_buildThirdPartyAppleLogin(),
             _buildOrWidget(),
+            //_buildLoginBtn(),
+
             _buildthirdPartyLogin("The Rich Online Member", ""),
             SizedBox(
               height: 35.h,
@@ -212,5 +255,8 @@ class SignInPage extends GetView<SignInController> {
         ),
       ),
     );
-  }
+  } // signin เก่า
+
+
+
 }

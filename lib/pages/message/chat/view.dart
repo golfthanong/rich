@@ -189,7 +189,7 @@ class ChatPage extends GetView<ChatController> {
                                   ),
                                 ),
                               ),
-                              GestureDetector(
+                              /*GestureDetector(
                                 child: Container(
                                   width: 40.w,
                                   height: 40.w,
@@ -199,11 +199,11 @@ class ChatPage extends GetView<ChatController> {
                                   //send message
                                   controller.sendMessage();
                                 },
-                              ),
+                              ),*/ //ปุ่มเครื่องบิน
                             ],
                           ),
                         ),
-                        GestureDetector(
+                       /* GestureDetector(
                           child: Container(
                             height: 40.w,
                             width: 40.w,
@@ -224,6 +224,29 @@ class ChatPage extends GetView<ChatController> {
                           ),
                           onTap: () {
                             controller.goMore();
+                          },
+                        ),*/
+                         GestureDetector(
+                          child: Container(
+                            height: 40.w,
+                            width: 40.w,
+                            padding: EdgeInsets.all(8.w),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryElement,
+                              borderRadius: BorderRadius.circular(40.w),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(1, 1),
+                                ),
+                              ],
+                            ),
+                            child: Image.asset('assets/icons/send.png'),
+                          ),
+                          onTap: () {
+                            controller.sendMessage();
                           },
                         ),
                       ],
