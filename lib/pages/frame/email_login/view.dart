@@ -329,6 +329,34 @@ class EmailLoginPage extends GetView<EmailLoginController> {
     );
   }
 
+  Widget _buildVersion() {
+    return Container(
+      margin: EdgeInsets.only(top: 20.h, bottom: 35.h),
+      child: Row(
+        children: [
+          Expanded(
+            child: Divider(
+              indent: 50,
+              height: 2.h,
+              color: AppColors.primarySecondaryElementText,
+            ),
+          ),
+          const Text(
+            ' Version 1.0.27  ',
+          ),
+          Expanded(
+            child: Divider(
+              endIndent: 50,
+              height: 2.h,
+              color: AppColors.primarySecondaryElementText,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -355,6 +383,7 @@ class EmailLoginPage extends GetView<EmailLoginController> {
 
                   //_ForgotPassword(),
                   _buildLoginBtn(),
+                  _buildVersion(),
                   //_bottom_register()
                 ],),),
           ),

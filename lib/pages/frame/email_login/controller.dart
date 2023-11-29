@@ -52,33 +52,6 @@ class EmailLoginController extends GetxController {
        // );
        asyncPostAllData(loginPanelListRequestEntity);
 
-       // if(credential.user==null) {
-       //   toastInfo(msg: "user not login.");
-       //   return;
-       // }
-       // if(!credential.user!.emailVerified){
-       //   toastInfo(msg: "please log in to verify your Phone Number");
-       //   return;
-       // }
-       // var user = credential.user;
-       // if(user!=null){
-       //
-       //   String? displayName = user.displayName;
-       //   String? email = user.email;
-       //   String? id = user.uid;
-       //   String? photoUrl = user.photoURL;
-       //
-       //   LoginRequestEntity loginPageListRequestEntity = new LoginRequestEntity();
-       //   loginPageListRequestEntity.avatar = photoUrl;
-       //   loginPageListRequestEntity.name = displayName;
-       //   loginPageListRequestEntity.email = email;
-       //   loginPageListRequestEntity.open_id = id;
-       //   loginPageListRequestEntity.type = 1;
-       //   asyncPostAllData(loginPageListRequestEntity);
-       //
-       // }else{
-       //   toastInfo(msg: 'login error');
-       // }
 
 
 
@@ -92,6 +65,7 @@ class EmailLoginController extends GetxController {
        }
      }
   }
+
   asyncPostAllData(LoginRequestEntity loginRequestEntity) async {
     EasyLoading.show(indicator: CircularProgressIndicator(),maskType: EasyLoadingMaskType.clear,dismissOnTap: true);
     var result = await UserAPI.Login(params: loginRequestEntity);

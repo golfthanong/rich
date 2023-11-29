@@ -37,6 +37,7 @@ class ContactItem {
   String? description;
   String? avatar;
   int? online;
+  String? roomPass;
   List<PinMessageResponseEntity>? pin;
 
   ContactItem({
@@ -45,6 +46,7 @@ class ContactItem {
     this.description,
     this.avatar,
     this.online,
+    this.roomPass,
     this.pin,
   });
 
@@ -55,6 +57,7 @@ class ContactItem {
         description: json["description"],
         avatar: json["avatar"],
         online: json["online"],
+        roomPass: json["roomPass"],
         pin: json["pin"] == null
             ? []
             : List<PinMessageResponseEntity>.from(json["pin"].map((x) => PinMessageResponseEntity.fromJson(x))),
@@ -66,6 +69,7 @@ class ContactItem {
     "description": description,
     "avatar": avatar,
     "online": online,
+    "roomPass": roomPass,
     "pin": pin == null
         ? []
         : List<dynamic>.from(pin!.map((x) => x.toJson())),

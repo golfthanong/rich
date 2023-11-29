@@ -109,7 +109,7 @@ class HttpUtil {
         EasyLoading.showError(eInfo.message);
         break;
       default:
-        EasyLoading.showError('Phone Or Password Failed');
+        EasyLoading.showError('Network Not Connect');
         break;
     }
   }

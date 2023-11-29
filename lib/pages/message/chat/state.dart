@@ -12,6 +12,7 @@ class ChatState {
   var to_online = ''.obs;
   var from_avatar = ''.obs;
   var msg_id = ''.obs;
+  var roomPass = ''.obs;
   RxBool more_status = false.obs;
   RxBool isloading = false.obs;
 

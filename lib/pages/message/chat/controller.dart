@@ -10,9 +10,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 //import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../common/values/colors.dart';
 
 
 // class PinMessageController extends GetxController{
@@ -43,9 +46,12 @@ class ChatController extends GetxController {
   Future<void> onReady() async {
     super.onReady();
 
+
+
+    _showFullScreenDialog();
     asyncLoadPinMesageData();
 
-    print('golf...doc id ${doc_id}');
+
     state.msgcontentList.clear();
     final messages = db.collection('message')
                        .doc(doc_id)
@@ -221,6 +227,8 @@ class ChatController extends GetxController {
     state.to_avatar.value = data['to_avatar']??"";
     state.to_online.value = data['to_online']??"1";
     state.from_avatar.value = data['from_avatar']??"";
+    state.roomPass.value = data['roomPass']??"";
+
   }
 
   void closeAllPop() async{
@@ -360,6 +368,111 @@ class ChatController extends GetxController {
       });
     }
   }
+
+  void _showFullScreenDialog() {
+    TextEditingController _textController = TextEditingController();
+
+    Get.dialog(
+      Scaffold(
+
+
+
+        body: Container(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              SizedBox(height: 16.0),
+              TextField(
+                controller: _textController,
+                decoration: InputDecoration(
+                  labelText: 'Enter Passwoord Room ${state.to_name}',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+
+
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle OK button logic, e.g., save the input text
+                      String enteredText = _textController.text;
+                      print('Entered text: $enteredText');
+                      Get.back(); // Close the dialog
+                    },
+                    child: Text('OK'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Get.back();
+                      Get.offAllNamed(AppRoutes.Message);// Close the dialog on Cancel
+                    },
+                    child: Text('Cancel'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  /*void _showFullScreenDialog() {
+    Get.dialog(
+      Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Please Enter Password Room' ,
+            overflow: TextOverflow.clip,
+            maxLines: 1,
+            style: TextStyle(
+              fontFamily: 'Avenir',
+              fontWeight: FontWeight.bold,
+              color: AppColors.primaryText,
+              fontSize: 12.sp,
+            ),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: () {
+                Get.back(); // Close the dialog
+              },
+            ),
+          ],
+        ),
+        body: Container(
+          // Your full-screen dialog content goes here
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('${state.to_name}'),
+              SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () {
+                  Get.back(); // Close the dialog
+                },
+                child: Text('OK'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }*/
+
+
+
+
+
+
 
   @override
   void onClose(){

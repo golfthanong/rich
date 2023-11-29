@@ -25,8 +25,24 @@ class ContactList extends GetView<ContactController> {
       ),
       child: InkWell(
         onTap: () {
-          //controller.goChat(item);
+          // item.roomPass ==''? controller.goChat(item)
+          // :Get.defaultDialog(
+          //   title: 'Please Enter Room Password?',
+          //   content: Container(),
+          //   onConfirm: () {
+          //     controller.state.backStatus = false as RxBool;
+          //     controller.goChat(item);
+          //   },
+          //   onCancel: () {},
+          //   textConfirm: 'Confirm',
+          //   textCancel: 'Cancel',
+          //   confirmTextColor: Colors.white,
+          // );  //ไว้ใส่ห้องที่ต้องการ ให้ใส่ password
+
           controller.goChat(item);
+
+
+
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
