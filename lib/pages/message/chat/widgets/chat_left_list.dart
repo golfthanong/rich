@@ -40,7 +40,7 @@ class ChatLeftList extends GetView<ChatController> {
                 ),
               ),
               errorWidget: (context, url, error) => Image(
-                image: AssetImage('assete/images/account_header.png'),
+                image: AssetImage('assete/images/app_logo.png'),
               ),
             ),
           ),
@@ -69,7 +69,7 @@ class ChatLeftList extends GetView<ChatController> {
                   ),
                   child: item.type == "text"
                       ? Text(
-                    '${item.content}',
+                    '${item.content}ggg${item.from_name}',
                     style: TextStyle(
                       fontSize: 14.sp,
                       color: AppColors.primaryElementText,

@@ -77,6 +77,7 @@ class ContactController extends GetxController {
                 "to_token":contactItem.token??"",
                 "to_name":contactItem.name??"",
                 "to_avatar":contactItem.avatar??"",
+                "from_name":msgdata.from_name??"",
                 "from_avater":msgdata.from_avatar??"",
                 "to_online": contactItem.online.toString()}
           );
@@ -104,6 +105,7 @@ class ContactController extends GetxController {
               "to_name":contactItem.name??"",
               "to_avatar":contactItem.avatar??"",
               "from_avatar": msgdata.from_avatar??"",
+              "from_name": msgdata.from_name??"",
               "to_online":contactItem.online.toString(),
               "roomPass":contactItem.roomPass.toString(),
             }
@@ -118,6 +120,7 @@ class ContactController extends GetxController {
               "to_name":contactItem.name??"",
               "to_avatar":contactItem.avatar??"",
               "from_avatar": msgdata.from_avatar??"",
+              "from_name": msgdata.from_name??"",
               "to_online":contactItem.online.toString(),
               "roomPass":contactItem.roomPass.toString(),
             });
@@ -155,6 +158,7 @@ class ContactController extends GetxController {
               "to_avatar":contactItem.avatar??"",
               "to_online": contactItem.online.toString(),
               "from_avatar": msgdata.from_avatar??"",
+              "from_name": msgdata.from_name??"",
         }
         );
 
@@ -183,6 +187,7 @@ class ContactController extends GetxController {
             "to_name":contactItem.name??"",
             "to_avatar":contactItem.avatar??"",
             "from_avatar": msgdata.from_avatar??"",
+            "from_name": msgdata.from_name??"",
             "to_online":contactItem.online.toString(),
             "roomPass":contactItem.roomPass.toString(),
           });

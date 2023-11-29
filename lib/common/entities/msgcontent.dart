@@ -7,6 +7,7 @@ class Msgcontent {
   final String? type;
   final Timestamp? addtime;
   final String? from_avatar;
+  final String? from_name;
    String? msg_id;
 
   Msgcontent({
@@ -17,6 +18,7 @@ class Msgcontent {
     this.addtime,
     this.from_avatar,
     this.msg_id,
+    this.from_name,
   });
 
   factory Msgcontent.fromFirestore(
@@ -31,6 +33,7 @@ class Msgcontent {
       type: data?['type'],
       addtime: data?['addtime'],
       from_avatar: data?['from_avatar'],
+      from_name: data?['from_name'],
     );
   }
 
@@ -43,6 +46,7 @@ class Msgcontent {
       if (addtime != null) "addtime": addtime,
       if (from_avatar != null) "from_avatar": from_avatar,
       if (msg_id != null) "msg_id": msg_id,
+      if (from_name != null) "from_name": from_name,
     };
   }
 }

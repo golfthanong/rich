@@ -48,7 +48,9 @@ class ChatController extends GetxController {
 
 
 
-    _showFullScreenDialog();
+    if (state.roomPass.value != "") {
+      _showFullScreenDialog();
+    }
     asyncLoadPinMesageData();
 
 
@@ -122,8 +124,7 @@ class ChatController extends GetxController {
       }
       // tempMsgList.reversed.forEach((element) {
       //   state.msgcontentList.value.insert(0, element);
-      // });
-      state.msgcontentList.refresh();
+      // });state.msgcontentList.refresh();
 
 
       if(myScrollController.hasClients){
@@ -227,6 +228,7 @@ class ChatController extends GetxController {
     state.to_avatar.value = data['to_avatar']??"";
     state.to_online.value = data['to_online']??"1";
     state.from_avatar.value = data['from_avatar']??"";
+    state.from_name.value = data['from_name']??"";
     state.roomPass.value = data['roomPass']??"";
 
   }
@@ -292,7 +294,9 @@ class ChatController extends GetxController {
         content: sendContent,
         type: "text",
         addtime: Timestamp.now(),
+      from_name: state.from_name.value,
         from_avatar: state.from_avatar.value,
+
     );
 
     await db.collection("message").doc(doc_id).collection('msglist')
@@ -387,7 +391,7 @@ class ChatController extends GetxController {
               TextField(
                 controller: _textController,
                 decoration: InputDecoration(
-                  labelText: 'Enter Passwoord Room ${state.to_name}',
+                  labelText: 'Enter Password Room ${state.to_name}',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -401,8 +405,11 @@ class ChatController extends GetxController {
                     onPressed: () {
                       // Handle OK button logic, e.g., save the input text
                       String enteredText = _textController.text;
-                      print('Entered text: $enteredText');
-                      Get.back(); // Close the dialog
+                      if (enteredText== state.roomPass.value) {
+                        Get.back(); // Close the dialog
+                      }else{
+                        _textController.text = "";
+                      }
                     },
                     child: Text('OK'),
                   ),
@@ -423,50 +430,7 @@ class ChatController extends GetxController {
   }
 
 
-  /*void _showFullScreenDialog() {
-    Get.dialog(
-      Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Please Enter Password Room' ,
-            overflow: TextOverflow.clip,
-            maxLines: 1,
-            style: TextStyle(
-              fontFamily: 'Avenir',
-              fontWeight: FontWeight.bold,
-              color: AppColors.primaryText,
-              fontSize: 12.sp,
-            ),
-          ),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.close),
-              onPressed: () {
-                Get.back(); // Close the dialog
-              },
-            ),
-          ],
-        ),
-        body: Container(
-          // Your full-screen dialog content goes here
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('${state.to_name}'),
-              SizedBox(height: 16.0),
-              ElevatedButton(
-                onPressed: () {
-                  Get.back(); // Close the dialog
-                },
-                child: Text('OK'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }*/
+
 
 
 
