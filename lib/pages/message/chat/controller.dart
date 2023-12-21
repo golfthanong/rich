@@ -48,9 +48,9 @@ class ChatController extends GetxController {
 
 
 
-    if (state.roomPass.value != "") {
-      _showFullScreenDialog();
-    }
+    // if (state.roomPass.value != "") {
+    //   _showFullScreenDialog();
+    // }
     asyncLoadPinMesageData();
 
 
@@ -81,7 +81,7 @@ class ChatController extends GetxController {
               Msgcontent msgtemp = change.doc.data()!;
               msgtemp.msg_id = change.doc.id!;
               tempMsgList.add(msgtemp!);
-              print('${change.doc.data()!}');
+              print('data contact ${change.doc.data()!}');
               print('doc id ${change.doc.id}');
               print('doc id ${msgtemp}');
 
@@ -124,7 +124,8 @@ class ChatController extends GetxController {
       }
       // tempMsgList.reversed.forEach((element) {
       //   state.msgcontentList.value.insert(0, element);
-      // });state.msgcontentList.refresh();
+      // });
+      state.msgcontentList.refresh();
 
 
       if(myScrollController.hasClients){
@@ -408,8 +409,7 @@ class ChatController extends GetxController {
                       if (enteredText== state.roomPass.value) {
                         Get.back(); // Close the dialog
                       }else{
-                        _textController.text = "";
-                      }
+                        _textController.text = "";}
                     },
                     child: Text('OK'),
                   ),

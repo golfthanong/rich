@@ -48,12 +48,23 @@ class ChatLeftList extends GetView<ChatController> {
           ConstrainedBox(
             constraints: BoxConstraints(
               maxWidth: 250.w,
-              maxHeight: 60.h,
+              maxHeight: 80.h,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Container(
+                 child:  Text(
+
+                    '${item.from_name} ',
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      color: AppColors.primaryText,
+                    ),
+                  )
+
+                ),
                 Container(
                   decoration: BoxDecoration(
                     color: item.type == "text"?AppColors.primaryElement
@@ -69,7 +80,7 @@ class ChatLeftList extends GetView<ChatController> {
                   ),
                   child: item.type == "text"
                       ? Text(
-                    '${item.content}ggg${item.from_name}',
+                    '${item.content}',
                     style: TextStyle(
                       fontSize: 14.sp,
                       color: AppColors.primaryElementText,
